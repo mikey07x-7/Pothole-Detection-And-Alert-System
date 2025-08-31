@@ -51,7 +51,7 @@ It uses **YOLO (Ultralytics)** for real-time pothole detection, integrates with 
 ### 🔹 Pre-steps
 ```bash
 # 1. Clone project
-git clone <repo-url>
+git clone (https://github.com/mikey07x-7/Pothole-Detection-And-Alert-System)
 cd pothole-detection
 
 # 2. Create virtual environment
