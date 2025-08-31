@@ -69,7 +69,7 @@ function initMap() {
   const tokenInput = document.getElementById("mapbox-token");
   const token =
     tokenInput?.value ||
-    "pk.eyJ1IjoibWlrZXl4MDd4IiwiYSI6ImNtZXNxdnVjZjA2MDYycnNiczY1NGsxN24ifQ.dGbC8As6-bLmevWuHyARlw";
+    "mapbox-token";
 
   mapboxgl.accessToken = token;
 
