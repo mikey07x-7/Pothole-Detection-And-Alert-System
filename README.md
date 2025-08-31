@@ -27,7 +27,7 @@ It uses **YOLO (Ultralytics)** for real-time pothole detection, integrates with 
 
 ## 🚀 Features
 
-- ✅ **YOLOv8-based pothole detection** (works on images, video, or webcam)  
+- ✅ **YOLOv11-based pothole detection** (works on images, video, or webcam)  
 - ✅ **GPS integration** (via USB NMEA GPS or IP-based geolocation fallback)  
 - ✅ **WebSocket server** → real-time streaming of detections to frontend  
 - ✅ **CSV logging** → stores timestamp, GPS, and confidence values  
