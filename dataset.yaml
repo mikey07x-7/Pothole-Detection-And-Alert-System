@@ -1,0 +1,5 @@
+train: E:\Pothole\Data\Train
+val: E:\Pothole\Data\Valid
+
+nc: 1
+names: ["Pothole"]

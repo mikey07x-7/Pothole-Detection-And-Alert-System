@@ -1,0 +1,9 @@
+ultralytics
+opencv-python
+websockets
+geocoder
+pynmea2
+pyserial
+numpy
+torch
+torchvision

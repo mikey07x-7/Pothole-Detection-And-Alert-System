@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <title>Pothole Mobile App</title>
+  <link rel="stylesheet" href="pothole_mobile.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="logo">PH</div>
+      <div>
+        <h1>Pothole Mobile Detection</h1>
+        <div class="muted">Real-time detections, history, map, and reporting</div>
+      </div>
+    </header>
+
+    <section class="row">
+      <div class="card map-card">
+        <div class="card-header">
+          <div class="muted">Live map</div>
+          <div class="controls">
+            <input id="ws-url" placeholder="ws://localhost:7777/feed" style="min-width:220px"/>
+            <input id="mapbox-token" placeholder="Mapbox token (optional)" style="min-width:220px"/>
+            <button id="btn-connect">Connect feed</button>
+            <button id="btn-disconnect" class="secondary" style="display:none">Disconnect</button>
+          </div>
+        </div>
+
+        <div id="map"></div>
+
+        <div class="ws-indicator">
+          <span class="dot idle" id="ws-dot"></span>
+          <span id="ws-status">idle</span>
+        </div>
+      </div>
+
+      <div class="card history-card">
+        <div class="card-header">
+          <div class="muted">Detections</div>
+          <div class="muted">Stored: <span id="count">0</span></div>
+        </div>
+
+        <div class="uploader">
+          <input id="manual-file" type="file" accept="image/*" />
+          <input id="manual-loc" placeholder="lat,lng" />
+          <button id="btn-location">📍 Use My Location</button>
+          <button id="manual-report">Report</button>
+        </div>
+
+        <!-- Filters + Search -->
+        <div class="history-controls">
+          <div class="history-filter">
+            <label class="muted">Filter:</label>
+            <select id="history-filter">
+              <option value="newest">Newest First</option>
+              <option value="oldest">Oldest First</option>
+              <option value="fixed">Fixed Only</option>
+              <option value="notfixed">Not Fixed Only</option>
+            </select>
+          </div>
+          <div class="history-search">
+            <input id="history-search" placeholder="Search (id, date, severity, lat/lng)"/>
+          </div>
+        </div>
+
+        <div class="list" id="history"></div>
+      </div>
+    </section>
+
+    <section class="card authority-card">
+      <div class="card-header">
+        <div class="muted">Authority Access</div>
+        <div class="authority-inputs">
+          <input id="authority-email" placeholder="authority@example.com" />
+          <button id="btn-authority-login">Confirm Authority</button>
+        </div>
+      </div>
+      <div class="muted notes">
+        Authorities can mark potholes as fixed after confirmation. (Local-only, no backend)
+      </div>
+    </section>
+
+    <footer>
+      <div>Made By Batch-10 : Ashwin Sharma ( 1BI23EC028 ) 
+        Junaid Iqbal A Chouri ( 1BI23EC068 )</div>
+      <div>Built for demo/project. Replace placeholders (WS URL, Mapbox token) before production.</div>
+    </footer>
+  </div>
+
+  <!-- Toast container -->
+  <div id="toast-wrap"></div>
+
+  <script src="pothole_mobile.js"></script>
+</body>
+</html>
