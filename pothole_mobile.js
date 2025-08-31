@@ -11,7 +11,7 @@ let map;
 // AUTHORITY ACCESS
 // ========================
 let isAuthority = false;
-const AUTHORITY_EMAIL = "mikeyproject07@gmail.com";
+const AUTHORITY_EMAIL = "authority@gmail.com";
 
 document.addEventListener("DOMContentLoaded", () => {
   const authBtn = document.getElementById("btn-authority-login");
