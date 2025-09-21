@@ -3,6 +3,7 @@
 This project is an **end-to-end AI-powered solution** for **pothole detection, visualization, and reporting**.  
 It uses **YOLO (Ultralytics)** for real-time pothole detection, integrates with **GPS** for location tagging, and streams detections via **WebSockets** to a **mobile-friendly web app** with **Mapbox visualization**.  
 
+This Model Gives a High Precision of 96% with High Recall at 0.7 Confidence
 ---
 
 ## 📂 Project Structure
